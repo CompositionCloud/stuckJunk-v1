@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>stuckJunk-v1: Log Reader</title>
+        <link rel="stylesheet" type="text/css" href="css/stuckJunk-v1.css">
+        <script src="js/stuckJunk-v1-board.js"></script>
+        <script src="js/stuckJunk-v1-players.js"></script>
+        <script src="js/stuckJunk-v1-GUI.js"></script>
+        <script src="js/stuckJunk-v1-logReader.js"></script>
+        <!--the script for loading Log Reader-->
+        <script>
+            let log_reader = sJv1logReader();
+            onload = log_reader.load;
+            onkeyup = log_reader.interact;
+        </script>
+    </head>
+    <body>
+        <!--body is added programmatically-->
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>stuckJunk-v1</title>
+        <link rel="stylesheet" type="text/css" href="css/stuckJunk-v1.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/stuckJunk-v1-board.js"></script>
+        <script src="js/stuckJunk-v1-players.js"></script>
+        <script src="js/stuckJunk-v1-GUI.js"></script>
+        <script src="js/stuckJunk-v1-client.js"></script>
+        <!--the script for loading stuckJunk-->
+        <script>
+            onload = function start() {
+                let socket = io();
+                let client = sJv1client(socket);
+                socket.emit("start");
+                socket.on("create game", client.createGame);
+                socket.on("init board", client.initBoard);
+                socket.on("create player", client.createPlayer);
+                socket.on("confirm player", client.confirmPlayer);
+                socket.on("update player", client.updatePlayer);
+                socket.on("the stuckJunk was found", client.theStuckJunkWasFound);
+                socket.on("everyone is stuckJunk", client.everyoneIsStuckJunk);
+                socket.on("game over", client.gameOver);
+                socket.on("init monitor", client.initMonitor);
+                socket.on("start monitoring", client.startMonitoring);
+                socket.on("wait for game", client.waitForGame);
+                socket.on("game aborted", client.gameAborted);
+                socket.on("player aborted", client.playerAborted);
+                onkeyup = client.interact;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <!--body is added programmatically-->
+    </body>
+</html>
