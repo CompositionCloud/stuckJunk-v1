@@ -14,6 +14,7 @@
             onload = function start() {
                 let socket = io();
                 let client = sJv1client(socket);
+                alert("Best viewed in full screen at 1280x800 resolution.");
                 socket.emit("start");
                 socket.on("create game", client.createGame);
                 socket.on("init board", client.initBoard);
