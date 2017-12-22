@@ -94,7 +94,7 @@ function sJv1client(socket) {
         
         do {
             result = window.prompt(
-                "*** CREATE GAME ***" + "\n\n" + "Type the number of players that will play the game. The minimum is two; the maximum is six." + "\n\n" + "For example, to create a two-player game, type 2.",
+                "*** CREATE A GAME ***" + "\n\n" + "Type the number of players that will play the game. The minimum is two; the maximum is six." + "\n\n" + "For example, to create a two-player game, type \"2\".",
                 "2"
             );
 
@@ -133,7 +133,7 @@ function sJv1client(socket) {
 
         do {
             result = window.prompt(
-                "*** CREATE PLAYER ***" + "\n\n" + "Type the player color, a comma and the numerical index of the rectangle from which you would like to start and click OK. Possible colors are red, green, blue, orange, magenta and cyan; indexes of the rectangles are arranged like that:" + "\n\n" + "00 01 02 03 04" + "\n" + "09 08 07 06 05" + "\n" + "10 11 12 13 14" + "\n" + "19 18 17 16 15" + "\n" + "20 21 22 23" + "\n\n" + "For example, to create a red player starting from the top-left rectangle, type red,00; to create a blue player starting from the top-right rectangle, type blue,04." + "\n\n" + "If you only want to monitor the game, type monitor.",
+                "*** NEW PLAYER ***" + "\n\n" + "Type your player's color, a comma, and the numerical index of the rectangle from which you would like to start. Possible colors are red, green, blue, orange, magenta, and cyan; the indexes of the rectangles range from 00 to 23. For example, to create a red player starting from the top-left rectangle, type \"red,00\"." + "\n\n" + "Type \"monitor\" if you only want to monitor the game.",
                 "red,00"
             );
 
